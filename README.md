@@ -1,52 +1,64 @@
 # EnvShield – Stream-Safe .env Masking
 
-EnvShield is a VS Code extension that visually masks values in `.env*` files to prevent accidental exposure of sensitive information during screen sharing, streaming, or recording.
+EnvShield is a Visual Studio Code extension that protects you from accidentally revealing sensitive environment variables during live streams, screen shares, or recordings. It visually masks values inside `.env*` files, giving you peace of mind while keeping your workflow unchanged.
 
-![EnvShield Demo](https://via.placeholder.com/600x300?text=EnvShield+Demo+GIF)
-*GIF placeholder - shows before/after of masked .env values*
+---
+
+## Preview
+
+**Masking Enabled**  
+![EnvShield Enabled](images/envshield-preview-enabled.png)
+
+**Masking Disabled**  
+![EnvShield Disabled](images/envshield-preview-disabled.png)
+
+**How to Enable Masking**  
+![How to Enable EnvShield](images/envshield-preview-how-to-enable.png)
+
+---
 
 ## Features
 
-- 🔒 **Visual Masking**: Masks environment variable values with customizable characters
-- 👁️ **Toggle Control**: Easily toggle masking on/off with a command or status bar click
-- 📋 **Whitelist Support**: Exclude specific keys (like `NODE_ENV`) from masking
-- 🎯 **Smart Detection**: Automatically works with `.env`, `.env.local`, `.env.production`, etc.
-- ⚡ **Real-time Updates**: Masks update automatically as you type
-- 🎨 **Status Bar Indicator**: Shows current masking state at a glance
+- 🔒 **Visual Masking** – Obscures environment variable values using customizable characters.  
+- 👁️ **Toggle Control** – Enable or disable masking instantly via a command or status bar item.  
+- 📋 **Whitelist Support** – Exempt specific keys (e.g., `NODE_ENV`) from masking.  
+- 🎯 **Smart Detection** – Works automatically with `.env`, `.env.local`, `.env.production`, and more.  
+- ⚡ **Real-time Updates** – Masks update dynamically as you type or edit.  
+- 🎨 **Status Bar Indicator** – Clearly shows whether masking is active.  
+
+---
 
 ## Settings
 
 | Setting | Type | Default | Description |
 |---------|------|---------|-------------|
 | `envShield.enabled` | boolean | `true` | Master enable/disable for EnvShield |
-| `envShield.maskOnStartup` | boolean | `true` | Apply masking when VS Code starts |
+| `envShield.maskOnStartup` | boolean | `true` | Apply masking automatically on startup |
 | `envShield.maskChar` | string | `"•"` | Character used for masking (first character only) |
-| `envShield.whitelistKeys` | array | `["NODE_ENV"]` | Environment variable keys that won't be masked |
+| `envShield.whitelistKeys` | array | `["NODE_ENV"]` | Keys that will not be masked |
 | `envShield.extraFileGlobs` | array | `[]` | Additional file patterns to apply masking to |
+
+---
 
 ## Commands
 
-- **EnvShield: Toggle Masking** (`envShield.toggle`) - Toggle masking on/off
+- **EnvShield: Toggle Masking** (`envShield.toggle`) – Toggle masking on/off with one click or command.
+
+---
 
 ## Usage
 
-1. Open any `.env*` file
-2. Values will be automatically masked (if enabled)
-3. Click the status bar item or use the command palette to toggle masking
-4. Configure whitelist and settings as needed
+1. Open any `.env*` file.  
+2. Masking is automatically applied (if enabled).  
+3. Use the status bar item or run **EnvShield: Toggle Masking** from the Command Palette to switch masking on/off.  
+4. Adjust settings and whitelist keys to fit your workflow.  
 
-## Important Security Notes
-
-⚠️ **This extension provides VISUAL masking only!**
-
-- The actual file content remains unchanged
-- Values are still present in memory and can be copied
-- This is NOT a security feature - it's a convenience tool for streaming/sharing
-- For true security, use example files (`.env.example`) with dummy values
+---
 
 ## Example
 
-Before masking:
+**Before Masking**
+
 ```env
 DATABASE_URL=postgresql://user:password@localhost:5432/mydb
 API_KEY=sk-1234567890abcdef
@@ -54,7 +66,8 @@ NODE_ENV=development
 SECRET_TOKEN=super-secret-value
 ```
 
-After masking:
+**After Masking**
+
 ```env
 DATABASE_URL=••••••••••••••••••••••••••••••••••••••••••••••••••
 API_KEY=••••••••••••••••••••
@@ -62,28 +75,47 @@ NODE_ENV=development
 SECRET_TOKEN=••••••••••••••••••
 ```
 
+---
+
+## Important Notes
+
+⚠️ **EnvShield provides *visual masking only*.**  
+- Actual file content remains unchanged.  
+- Secret values can still be copied, searched, or viewed in source control diffs.  
+- This is a convenience tool for streaming/sharing, not a security measure.  
+- For real security, use `.env.example` files with placeholder values.  
+
+---
+
 ## Development
 
-To work on this extension:
+To build and test EnvShield locally:
 
 ```bash
-# Clone and install dependencies
+# Install dependencies
 npm install
 
 # Compile TypeScript
 npm run compile
 
-# Watch for changes
+# Watch for changes during development
 npm run watch
 
-# Package extension
+# Package extension into a .vsix file
 npm run package
 ```
 
+Run the extension in a VS Code Extension Development Host using **F5**.
+
+---
+
 ## License
 
-MIT
+MIT License © 2025  
+
+---
 
 ## Contributing
 
-Issues and pull requests welcome on GitHub!
+Contributions are welcome!  
+Open an [issue](https://github.com/markpython86/envshield/issues) or submit a pull request on GitHub to suggest improvements, report bugs, or add features.
