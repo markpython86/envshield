@@ -13,6 +13,7 @@
   "activationEvents": [
     "onLanguage:dotenv"
   ],
+  "icon": "images/envshield.png",
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
