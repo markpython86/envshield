@@ -2,6 +2,18 @@
 
 All notable changes to the "EnvShield" extension will be documented in this file.
 
+## [0.1.0] - 2025-09-22
+
+### Fixed
+- Fixed file detection to properly recognize `.env*` files by filename pattern
+- Improved activation events for better extension loading
+- Enhanced debugging and console logging for troubleshooting
+
+### Changed
+- Updated VS Code engine compatibility to ^1.74.0
+- Updated dependencies to latest versions
+- Improved file detection logic to work with both language ID and filename patterns
+
 ## [0.0.1] - 2025-09-21
 
 ### Added
