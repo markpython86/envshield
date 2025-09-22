@@ -14,6 +14,7 @@ EnvShield is a Visual Studio Code extension that protects you from accidentally 
 
 **Masking Enabled**  
 ![EnvShield Enabled](images/envshield-preview-enabled.png)
+
 ---
 
 ## Features
