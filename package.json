@@ -2,10 +2,10 @@
   "name": "envshield",
   "displayName": "EnvShield – Stream-Safe .env Masking",
   "description": "Masks values in .env* files inside the editor using decorations (visual only). Toggleable with a command, with whitelist support.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "markpython86",
   "engines": {
-    "vscode": "^1.74.0"
+    "vscode": "^1.104.0"
   },
   "categories": [
     "Other"
